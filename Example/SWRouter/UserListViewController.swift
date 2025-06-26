@@ -11,11 +11,11 @@ import SWRouter
 
 class UserListViewController: UIViewController {
     
-    private let userService: UserServiceProtocol
+    private let userService: UserService
     private let tableView = UITableView()
     private var users: [User] = []
     
-    init(userService: UserServiceProtocol) {
+    init(userService: UserService) {
         self.userService = userService
         super.init(nibName: nil, bundle: nil)
     }

@@ -55,6 +55,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return HomeViewController()
         }
         
+        router.register(UIViewController.self, route: RouteKey.detail) { resolver in
+            return DetailViewController(userId: "default")
+        }
+        
         // 注册带单个参数的视图控制器
         router.register(UIViewController.self, route: RouteKey.detail) { resolver, userId in
             return DetailViewController(userId: userId)
@@ -70,6 +74,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return SettingsViewController(userId: userId, section: section, isAdmin: isAdmin)
         }
         
+        // 注册用户列表视图控制器
+        router.register(UIViewController.self, route: RouteKey.userList) { resolver in
+            let userService = resolver.resolve(UserService.self)!
+            return UserListViewController(userService: userService)
+        }
         
         // 注册服务
         router.container.register(UserService.self) { _ in

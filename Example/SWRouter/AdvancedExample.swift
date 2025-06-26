@@ -118,6 +118,12 @@ class AdminViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .red
         title = "管理员页面"
+        
+        let label = UILabel()
+        label.text = "这是管理员专用页面"
+        label.textAlignment = .center
+        label.frame = view.bounds
+        view.addSubview(label)
     }
 }
 
@@ -126,6 +132,12 @@ class UserViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .blue
         title = "用户页面"
+        
+        let label = UILabel()
+        label.text = "这是普通用户页面"
+        label.textAlignment = .center
+        label.frame = view.bounds
+        view.addSubview(label)
     }
 }
 
@@ -147,6 +159,12 @@ class ElectronicsViewController: ProductViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "电子产品"
+        
+        let label = UILabel()
+        label.text = "电子产品页面"
+        label.textAlignment = .center
+        label.frame = view.bounds
+        view.addSubview(label)
     }
 }
 
@@ -154,6 +172,12 @@ class ClothingViewController: ProductViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "服装"
+        
+        let label = UILabel()
+        label.text = "服装页面"
+        label.textAlignment = .center
+        label.frame = view.bounds
+        view.addSubview(label)
     }
 }
 
@@ -161,6 +185,12 @@ class BooksViewController: ProductViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "图书"
+        
+        let label = UILabel()
+        label.text = "图书页面"
+        label.textAlignment = .center
+        label.frame = view.bounds
+        view.addSubview(label)
     }
 }
 
@@ -213,6 +243,12 @@ class Feature1ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .purple
         title = "功能1"
+        
+        let label = UILabel()
+        label.text = "动态路由 - 功能1"
+        label.textAlignment = .center
+        label.frame = view.bounds
+        view.addSubview(label)
     }
 }
 
@@ -221,6 +257,12 @@ class Feature2ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .orange
         title = "功能2"
+        
+        let label = UILabel()
+        label.text = "动态路由 - 功能2"
+        label.textAlignment = .center
+        label.frame = view.bounds
+        view.addSubview(label)
     }
 }
 
@@ -229,6 +271,12 @@ class Feature3ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .brown
         title = "功能3"
+        
+        let label = UILabel()
+        label.text = "动态路由 - 功能3"
+        label.textAlignment = .center
+        label.frame = view.bounds
+        view.addSubview(label)
     }
 }
 
@@ -237,6 +285,12 @@ class SecureViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemGreen
         title = "安全页面"
+        
+        let label = UILabel()
+        label.text = "这是安全页面，需要登录才能访问"
+        label.textAlignment = .center
+        label.frame = view.bounds
+        view.addSubview(label)
     }
 }
 
@@ -245,5 +299,11 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
         title = "登录页面"
+        
+        let label = UILabel()
+        label.text = "请先登录"
+        label.textAlignment = .center
+        label.frame = view.bounds
+        view.addSubview(label)
     }
 }

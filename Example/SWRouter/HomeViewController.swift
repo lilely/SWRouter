@@ -90,7 +90,7 @@ class HomeViewController: UIViewController {
     // MARK: - Actions
     @objc private func detailButtonTapped() {
         // 使用无参数的路由跳转
-        pushRoute(RouteKey.home, animated: true)
+        pushRoute(RouteKey.detail, animated: true)
     }
     
     @objc private func profileButtonTapped() {
@@ -122,8 +122,11 @@ class HomeViewController: UIViewController {
         
         alert.addAction(UIAlertAction(title: "动态路由", style: .default) { _ in
             let dynamicKey = DynamicRouteKey(key: "feature1")
-            if let vc = Router.shared.viewController(for: dynamicKey) {
+            switch Router.shared.viewController(for: dynamicKey) {
+            case .success(let vc):
                 self.navigationController?.pushViewController(vc, animated: true)
+            case .failure(let error):
+                self.handleRouterError(error)
             }
         })
         
@@ -155,5 +158,16 @@ class HomeViewController: UIViewController {
             UserDefaults.standard.set(true, forKey: "isLoggedIn")
             pushRoute(RouteKey.secure, animated: true)
         }
+    }
+    
+    // MARK: - 错误处理
+    private func handleRouterError(_ error: RouterError) {
+        #if DEBUG
+        let alert = UIAlertController(title: "路由错误", message: error.localizedDescription, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "确定", style: .default))
+        present(alert, animated: true)
+        #else
+        print("Router Error: \(error.localizedDescription)")
+        #endif
     }
 } 
