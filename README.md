@@ -375,7 +375,7 @@ xcodebuild test -workspace Example/SWRouter.xcworkspace -scheme SWRouter-Example
 
 - 项目主页: [GitHub](https://github.com/your-username/SWRouter)
 - 问题反馈: [Issues](https://github.com/your-username/SWRouter/issues)
-- 邮箱: your-email@example.com
+- 邮箱: lilely@163.com
 
 ---
 
