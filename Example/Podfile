@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'SWRouter_Example' do
+  pod 'SWRouter', :path => '../'
+
+  target 'SWRouter_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

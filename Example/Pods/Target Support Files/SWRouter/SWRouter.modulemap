@@ -1,0 +1,6 @@
+framework module SWRouter {
+  umbrella header "SWRouter-umbrella.h"
+
+  export *
+  module * { export * }
+}
